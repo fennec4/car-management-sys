@@ -1,0 +1,12 @@
+# Ignorer binaires, libs, exécutables, JDK, etc.
+front/lib/
+front/bin/
+front/.classpath
+front/.project
+front/build.fxbuild
+*.class
+*.jar
+*.exe
+*.log
+.DS_Store
+

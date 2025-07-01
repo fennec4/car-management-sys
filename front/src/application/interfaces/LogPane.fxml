@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.LogController">
+   <children>
+      <AnchorPane fx:id="main" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane id="gauche" layoutY="1.0" prefHeight="450.0" prefWidth="284.0" stylesheets="@application.css">
+               <children>
+                  <ImageView fitHeight="300.0" fitWidth="300.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0">
+                     <image>
+                        <Image url="@logo.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+            <AnchorPane id="droite" layoutX="299.0" layoutY="1.0" prefHeight="450.0" prefWidth="401.0" stylesheets="@application.css">
+               <children>
+                  <FontIcon iconLiteral="fas-user" iconSize="60" layoutX="164.0" layoutY="104.0" />
+                  <TextField fx:id="nom" layoutX="65.0" layoutY="172.0" prefHeight="35.0" prefWidth="250.0" promptText="Nom d'utilisateur">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></TextField>
+                  <Button fx:id="connecter" layoutX="140.0" layoutY="315.0" mnemonicParsing="false" onAction="#connect" prefHeight="20.0" prefWidth="100.0" text="Connecter">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                  <PasswordField fx:id="motdepasse" layoutX="65.0" layoutY="239.0" prefHeight="35.0" prefWidth="250.0" promptText="Mot de passe">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></PasswordField>
+                  <Button fx:id="close" alignment="CENTER" contentDisplay="CENTER" layoutX="285.0" layoutY="12.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="50.0" styleClass="time" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <graphic>
+                        <FontIcon iconLiteral="fas-times" iconSize="15" styleClass="x" textAlignment="JUSTIFY" wrappingWidth="12.80004620552063" />
+                     </graphic>
+                  </Button>
+               </children></AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

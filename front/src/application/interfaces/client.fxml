@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.client.ClientController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #d7dbdb;">
+         <top>
+            <AnchorPane prefHeight="60.0" prefWidth="1100.0" styleClass="top" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="306.0" layoutY="-33.0" prefHeight="30.0" prefWidth="1100.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="497.0" layoutY="9.0" styleClass="acceille" text="Clients" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets top="10.0" />
+               </BorderPane.margin>
+               <children>
+                  <AnchorPane layoutX="363.0" layoutY="-24.0" prefHeight="100.0" prefWidth="760.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox alignment="CENTER" layoutX="168.0" layoutY="-8.0" prefHeight="100.0" prefWidth="200.0" spacing="20.0" styleClass="box" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#addclient" prefHeight="150.0" prefWidth="150.0" styleClass="ajouter" text="Nouveau">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button layoutX="608.0" layoutY="31.0" mnemonicParsing="false" onAction="#modclient" prefHeight="150.0" prefWidth="150.0" styleClass="modifier" text="Modifier">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button layoutX="704.0" layoutY="20.0" mnemonicParsing="false" onAction="#supclient" prefHeight="150.0" prefWidth="150.0" styleClass="supprimer" text="Supprimer">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button layoutX="141.0" layoutY="31.0" mnemonicParsing="false" onAction="#showallclient" prefHeight="150.0" prefWidth="150.0" styleClass="rafraichir" text="Rafraichir">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <TextField fx:id="recherche" onKeyPressed="#handleRecherche" prefHeight="30.0" prefWidth="255.0" promptText="Recherche" styleClass="text">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" top="10.0" />
+                           </padding></HBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="box" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="110.0">
+                     <children>
+                        <TableView fx:id="client_tab" layoutX="312.0" layoutY="109.0" prefHeight="200.0" prefWidth="900.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+    <columns>
+        <TableColumn fx:id="Num_client" prefWidth="70.0" text="Numero " />
+        <TableColumn fx:id="Nom" prefWidth="75.0" text="Nom" />
+        <TableColumn fx:id="Prenom" prefWidth="75.0" text="Prenom" />
+        <TableColumn fx:id="Email" prefWidth="150.0" text="Email" />
+        <TableColumn fx:id="Phone" prefWidth="100.0" text="Phone" />
+        <TableColumn fx:id="Type" prefWidth="75.0" text="Type" />
+        <TableColumn fx:id="Date_Inscription" prefWidth="125.0" text="Date Inscription" />
+        <TableColumn fx:id="Details" prefWidth="400.0" text="Details Client" />
+    </columns>
+    <columnResizePolicy>
+        <!-- permet le scroll horizontal -->
+        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+    </columnResizePolicy>
+</TableView>
+
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

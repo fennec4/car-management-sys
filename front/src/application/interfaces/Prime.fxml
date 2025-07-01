@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.employe.PrimeController">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="1100.0" stylesheets="@application.css">
+         <children>
+            <TableView fx:id="prime_tab" layoutX="20.0" layoutY="259.0" prefHeight="387.0" prefWidth="931.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0">
+              <columns>
+                <TableColumn fx:id="poste" prefWidth="100.0" text="Post" />
+                <TableColumn fx:id="prime" prefWidth="100.0" text="Montant" />
+                  <TableColumn fx:id="type_prime" prefWidth="100.0" text="Prime" />
+                  <TableColumn fx:id="date_attribution" prefWidth="150.0" text="Date attribution" />
+                  <TableColumn fx:id="date_fin" prefWidth="120.0" text="Date fin" />
+                  <TableColumn fx:id="commentaire" prefWidth="500.0" text="Commentaire" />
+              </columns>
+            </TableView>
+            <AnchorPane id="top" layoutX="-2.0" layoutY="-1.0" prefHeight="185.0" prefWidth="1100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="641.0" layoutY="85.0" prefHeight="78.0" prefWidth="147.0" text="Prime" AnchorPane.rightAnchor="200.0">
+                     <font>
+                        <Font name="System Bold" size="51.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="300.0" fitWidth="300.0" layoutX="-17.0" layoutY="-52.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="-20.0" AnchorPane.topAnchor="-50.0">
+               <image>
+                  <Image url="@logo.png" />
+               </image>
+            </ImageView>
+            <VBox alignment="CENTER" prefHeight="400.0" prefWidth="150.0" spacing="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#ajouter" prefHeight="40.0" prefWidth="100.0" styleClass="ajouter" text="Ajouter">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#modifier" prefHeight="40.0" prefWidth="100.0" styleClass="modifier" text="Modifier">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#chargerPrime" prefHeight="40.0" prefWidth="100.0" styleClass="rafraichir" text="Rafraîchir">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

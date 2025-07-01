@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.Accueille">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #d7dbdb;">
+         <top>
+            <AnchorPane prefHeight="20.0" prefWidth="200.0" styleClass="top" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="1.6" layoutY="1.6" prefHeight="30.0" prefWidth="1100.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="1100.0" styleClass="acceille" text="Accueille" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="4.0" layoutY="181.0" prefHeight="700.0" prefWidth="300.0" styleClass="gauche" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0">
+                     <children>
+                        <FontIcon iconColor="WHITE" iconLiteral="fas-user" iconSize="80" layoutX="113.0" layoutY="108.0" text="" wrappingWidth="71.46670532226562" />
+                        <Label layoutX="84.0" layoutY="134.0" text="Bien venue" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Line endX="133.99996948242188" endY="1.52587890625E-5" layoutX="150.0" layoutY="192.0" startX="-138.00001525878906" startY="1.52587890625E-5" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                        <VBox alignment="CENTER" layoutX="31.0" layoutY="383.0" prefHeight="200.0" prefWidth="100.0" spacing="40.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="200.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#handleShowClient" prefHeight="40.0" prefWidth="226.0" text="Clients" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#handleShowEmploye" prefHeight="40.0" prefWidth="226.0" stylesheets="@application.css" text="Employés" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#handleShowVoitures" prefHeight="40.0" prefWidth="226.0" text="Vehicules" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#handleShowRendezvous" prefHeight="40.0" prefWidth="226.0" text="Rendez vous" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#handleShowStock" prefHeight="40.0" prefWidth="226.0" text="Stock" textAlignment="CENTER">
+    							<font>
+        							<Font name="System Bold" size="18.0" />
+    							</font>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+							</Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="client" prefHeight="639.0" prefWidth="803.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0">
+                     <children>
+                        <AnchorPane layoutX="91.0" layoutY="57.0" prefHeight="100.0" prefWidth="760.0" styleClass="box" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="190.0" prefWidth="760.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Button layoutX="508.0" layoutY="31.0" mnemonicParsing="false" onAction="#addclient" prefHeight="150.0" prefWidth="150.0" styleClass="ajouter" text="Nouveau">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#showallclient" prefHeight="150.0" prefWidth="150.0" styleClass="rafraichir" text="Rafraîchir">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#details" prefHeight="30.0" prefWidth="30.0" styleClass="pls">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                       <graphic>
+                                          <FontIcon iconLiteral="fas-plus" iconSize="25" styleClass="plus" textAlignment="JUSTIFY" wrappingWidth="19.199951171875" />
+                                       </graphic>
+                                    </Button>
+                                    <TextField fx:id="recherche" onKeyPressed="#handleRecherche" prefHeight="30.0" prefWidth="255.0" promptText="Recherche" styleClass="text">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                           </children></AnchorPane>
+                        <AnchorPane layoutX="126.0" layoutY="315.0" prefHeight="500.0" prefWidth="760.0" styleClass="box" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="150.0">
+                           <children>
+                              <TableView fx:id="client_tab" layoutX="47.0" layoutY="84.0" prefHeight="200.0" prefWidth="679.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                <columns>
+                                    <TableColumn fx:id="Num_client" prefWidth="40.0" text="Numero" />
+                                  <TableColumn fx:id="Nom" prefWidth="75.0" text="Nom " />
+                                  <TableColumn fx:id="Prenom" prefWidth="75.0" text="Prenom" />
+                                    <TableColumn fx:id="Email" prefWidth="75.0" text="Email" />
+                                    <TableColumn fx:id="Phone" prefWidth="75.0" text="Phone" />
+                                    <TableColumn fx:id="Type" prefWidth="75.0" text="Type" />
+                                </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children></AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="employe" prefHeight="639.0" prefWidth="803.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0">
+                     <children>
+                        <AnchorPane layoutX="91.0" layoutY="57.0" prefHeight="100.0" prefWidth="760.0" styleClass="box" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="190.0" prefWidth="760.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#showallemploye" prefHeight="150.0" prefWidth="150.0" styleClass="rafraichir" text="Rafraîchir">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#details" prefHeight="30.0" prefWidth="30.0" styleClass="pls">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                       <graphic>
+                                          <FontIcon iconLiteral="fas-plus" iconSize="25" styleClass="plus" textAlignment="JUSTIFY" wrappingWidth="19.199951171875" />
+                                       </graphic>
+                                    </Button>
+                                    <TextField fx:id="recherche_employe" maxWidth="700.0" minWidth="370.0" onKeyPressed="#handleRecherche" prefHeight="40.0" prefWidth="370.0" promptText="Recherche" styleClass="text" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="NONE" />
+                                       </cursor>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="126.0" layoutY="315.0" prefHeight="500.0" prefWidth="760.0" styleClass="box" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="150.0">
+                           <children>
+                              <TableView fx:id="employe_tab" layoutX="47.0" layoutY="84.0" prefHeight="200.0" prefWidth="679.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                 <columns>
+                                    <TableColumn fx:id="Matricule" prefWidth="50.0" text="Matricule" />
+                                    <TableColumn fx:id="Nom_employe" prefWidth="75.0" text="Nom" />
+                                    <TableColumn fx:id="Prenom_employe" prefWidth="75.0" text="Prenom" />
+                                    <TableColumn fx:id="Email_employe" prefWidth="75.0" text="Email" />
+                                    <TableColumn fx:id="Phone_employe" prefWidth="75.0" text="Phone" />
+                                    <TableColumn fx:id="Statut" prefWidth="75.0" text="Statut" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="Vehicule" prefHeight="639.0" prefWidth="803.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0">
+                     <children>
+                        <AnchorPane layoutX="91.0" layoutY="57.0" prefHeight="100.0" prefWidth="760.0" styleClass="box" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="190.0" prefWidth="760.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Button layoutX="508.0" layoutY="31.0" mnemonicParsing="false" onAction="#addvehicule" prefHeight="150.0" prefWidth="150.0" styleClass="ajouter" text="Nouveau">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button layoutX="87.0" layoutY="31.0" mnemonicParsing="false" onAction="#modvehicule" prefHeight="150.0" prefWidth="150.0" styleClass="modifier" text="Modifier">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#supvehicule" prefHeight="150.0" prefWidth="150.0" styleClass="supprimer" text="Supprimer">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <TextField fx:id="recherche_vehicule" onKeyPressed="#handleRecherche" prefHeight="30.0" prefWidth="255.0" promptText="Recherche" styleClass="text">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="126.0" layoutY="315.0" prefHeight="500.0" prefWidth="760.0" styleClass="box" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="150.0">
+                           <children>
+                              <TableView fx:id="vehicule_tab" layoutX="47.0" layoutY="84.0" prefHeight="200.0" prefWidth="679.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                 <columns>
+                                    <TableColumn fx:id="proprietaire" prefWidth="120.0" text="Proprietaire" />
+                                    <TableColumn fx:id="matricule" text="Matricule" />
+                                    <TableColumn fx:id="marque" prefWidth="75.0" text="Marque" />
+                                    <TableColumn fx:id="modele" prefWidth="75.0" text="Modele" />
+                                    <TableColumn fx:id="couleur" prefWidth="75.0" text="Couleur" />
+                                    <TableColumn fx:id="carburant" prefWidth="75.0" text="Carburant" />
+                                    <TableColumn fx:id="kilometrage" prefWidth="75.0" text="Kilometrage" />
+                                    <TableColumn fx:id="num_chassi" prefWidth="75.0" text="N°chassi" />
+                                    <TableColumn fx:id="annee_fabrication" prefWidth="75.0" text="Année" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="rendez_vous" prefHeight="639.0" prefWidth="803.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0">
+                     <children>
+                        <AnchorPane layoutX="91.0" layoutY="57.0" prefHeight="100.0" prefWidth="760.0" styleClass="box" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="190.0" prefWidth="760.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Button layoutX="508.0" layoutY="31.0" mnemonicParsing="false" onAction="#addrdv" prefHeight="150.0" prefWidth="150.0" styleClass="ajouter" text="Nouveau">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button layoutX="87.0" layoutY="31.0" mnemonicParsing="false" onAction="#modvrdv" prefHeight="150.0" prefWidth="150.0" styleClass="modifier" text="Modifier">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#showallrendez_vous" prefHeight="150.0" prefWidth="150.0" styleClass="rafraichir" text="Rafraîchir">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <TextField fx:id="recherche_rdv" onKeyPressed="#handleRecherche" prefHeight="30.0" prefWidth="255.0" promptText="Recherche" styleClass="text">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="126.0" layoutY="315.0" prefHeight="500.0" prefWidth="760.0" styleClass="box" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="150.0">
+                           <children>
+                              <TableView fx:id="rendezvous_tab" layoutX="47.0" layoutY="84.0" prefHeight="200.0" prefWidth="679.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                 <columns>
+                                    <TableColumn fx:id="date_rdv" prefWidth="100.0" text="Date" />
+                                    <TableColumn fx:id="heure_rdv" prefWidth="70.0" text="Heure" />
+                                    <TableColumn fx:id="client_rdv" prefWidth="150.0" text="Client" />
+                                    <TableColumn fx:id="employe_rdv" prefWidth="150.0" text="Employe chargé" />
+                                    <TableColumn fx:id="vehicule_rdv" prefWidth="120.0" text="Vehicule" />
+                                    <TableColumn fx:id="detail_rdv" minWidth="150.0" prefWidth="500.0" styleClass="left-align-cell" text="Details" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="stock" prefHeight="639.0" prefWidth="803.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="15.0">
+    <children>
+        <AnchorPane layoutX="91.0" layoutY="57.0" prefHeight="100.0" prefWidth="760.0" styleClass="box" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="190.0" prefWidth="760.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#initialize" prefHeight="150.0" prefWidth="150.0" styleClass="rafraichir" text="Rafraîchir">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#details" prefHeight="30.0" prefWidth="30.0" styleClass="pls">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                            </HBox.margin>
+                            <graphic>
+                                <FontIcon iconLiteral="fas-plus" iconSize="25" styleClass="plus" textAlignment="JUSTIFY" wrappingWidth="19.199951171875" />
+                            </graphic>
+                        </Button>
+                        <TextField fx:id="recherche_stock" prefHeight="30.0" prefWidth="255.0" promptText="Recherche" styleClass="text">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets right="10.0" />
+                            </HBox.margin>
+                        </TextField>
+                    </children>
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                    </padding>
+                </HBox>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="126.0" layoutY="315.0" prefHeight="500.0" prefWidth="760.0" styleClass="box" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="150.0">
+            <children>
+                <TableView fx:id="stock_tab" layoutX="47.0" layoutY="84.0" prefHeight="200.0" prefWidth="679.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                    <columns>
+                        <TableColumn fx:id="reference_col" prefWidth="100.0" text="Référence" />
+                        <TableColumn fx:id="nom_col" prefWidth="150.0" text="Produit" />
+                        <TableColumn fx:id="quantite_col" prefWidth="70.0" text="Quantité" />
+                        <TableColumn fx:id="prix_col" prefWidth="70.0" text="Prix" />
+                        <TableColumn fx:id="Emplacement" prefWidth="120.0" text="Emplacement" />
+                        <TableColumn fx:id="description_col" prefWidth="200.0" text="Description" />
+                    </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                </TableView>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

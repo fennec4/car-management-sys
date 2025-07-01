@@ -1,0 +1,236 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+#gauche {
+    -fx-background-color: linear-gradient(to bottom, #5ebadb, #0d7ba3);
+}
+
+.button{
+	-fx-background-color: #0d7ba3;
+	-fx-text-fill: white;
+	-fx-background-radius: 10px;
+	-fx-border-radius: 10px;
+	-fx-border-width: 2px;
+	-fx-border-color: #034b9e;
+	-fx-cursor:hand;
+	
+}
+
+.button:hover{
+	-fx-background-color: #034b9e;
+	
+	
+}
+
+.time{
+	-fx-background-color: #ced3e0;
+	-fx-border-color: transparent;
+	
+}
+.time:hover{
+	-fx-background-color: #aab0bf;
+	
+	
+}
+
+.time:hover .x{
+	-fx-fill: red;
+		
+}
+
+.pls{
+	-fx-background-color: #ced3e0;
+	-fx-border-color: transparent;
+}
+
+.pls:hover{
+	-fx-background-color: #0aa834;
+}
+
+.pls:hover .plus{
+	-fx-fill: #00d193;
+		
+}
+	
+#top{
+	-fx-background-color: linear-gradient(to right, #5ebadb, #0d7ba3);
+
+}
+
+.label-bold {
+    -fx-font-weight: bold;
+}
+
+.top{
+	-fx-background-color: #efefef;
+	-fx-border-color: #000;
+	-fx-border-width: .2px .4px .4px .4px;
+}
+.acceille{
+	-fx-background-color: linear-gradient(to bottom, #c0c4c4, #efefef); 
+}
+.gauche{
+	-fx-background-color: linear-gradient(to bottom, #5ebadb, #0d7ba3);
+	-fx-border-radius: 10px;
+	-fx-background-radius: 10px 10px 0px 0px;
+	}
+.box{
+	-fx-background-color: #efefef;
+	-fx-border-radius: 10px;
+	-fx-background-radius: 10px;
+}
+.text{
+	-fx-border-radius: 10px;
+	-fx-background-radius: 10px;
+	
+}
+.text:hover{
+	-fx-border-color: #646969;
+}
+.table-view{
+	-fx-background-color: transparent;
+	-fx-border-color: #646969;
+	-fx-border-radius: 10px;
+	-fx-background-radius: 10px;
+	-fx-border-width: 2px;
+	-fx-padding: 0px;
+}
+.table-view .column-header-background{
+	-fx-background-color: linear-gradient(to bottom, #5ebadb, #0d7ba3);
+	-fx-background-radius: 8px 8px 0px 0px;
+	
+}
+.table-view .column-header{
+	-fx-background-color: transparent;
+	-fx-size: 30px ;
+}
+.table-view .column-header .label {
+    -fx-text-fill: white; /* Couleur du texte du header */
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+.table-cell {
+    -fx-alignment: CENTER;
+}
+.left-align-cell .table-cell {
+    -fx-alignment: CENTER-LEFT;
+}
+
+
+.ajouter{
+	-fx-background-color: #549ef7;
+	-fx-border-color: transparent;
+}
+.ajouter:hover{
+	-fx-background-color: #0571f2;
+}
+.modifier{
+	-fx-background-color: #16cc96;
+	-fx-border-color: transparent;
+}
+.modifier:hover{
+	-fx-background-color: #128261;
+}
+.supprimer{
+	-fx-background-color: #f71e1e;
+	-fx-border-color: transparent;
+}
+.supprimer:hover{
+	-fx-background-color: #db0404;
+}
+.rafraichir{
+	-fx-background-color: #7F8C8D;
+	-fx-border-color: transparent;
+}
+.rafraichir:hover{
+	-fx-background-color: #2C3E50;
+}
+.post{
+	-fx-background-color: #6C63FF;
+	-fx-border-color: transparent;
+}
+.post:hover{
+	-fx-background-color: #3b34a3;
+}
+.scroll-pane {
+    -fx-background-color:  transparent;
+    -fx-border-color: transparent;
+    
+}
+
+.scroll-pane .viewport {
+    -fx-background-color:  transparent;
+}
+
+.scroll-pane .scroll-bar {
+    -fx-opacity: 0;
+    -fx-background-color: transparent;
+}
+
+.date-picker {
+    -fx-background-color: transparent;
+    -fx-border-color: #007ACC;
+    -fx-font-size: 14px;
+    -fx-text-fill: #000000;
+}
+
+.date-picker .arrow-button {
+    -fx-background-color: #007ACC;
+}
+
+.date-picker .arrow-button .arrow {
+    -fx-background-color: white;
+}
+.date-picker-popup {
+    -fx-background-color: white;
+    -fx-border-color: #646969;
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 5);
+}
+
+.date-picker-popup .month-year-pane {
+    -fx-background-color: #549ef7;
+    -fx-background-radius: 8px;
+}
+
+.date-picker-popup .spinner .button {
+    -fx-background-color: #0571f2;
+    -fx-text-fill: white;
+}
+
+
+
+.date-picker-popup .day-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #333333;
+}
+
+.date-picker-popup .day-cell:hover {
+    -fx-background-color: #a1a6ad;
+}
+
+.date-picker-popup .selected {
+    -fx-background-color: #549ef7;
+    -fx-text-fill: white;
+}
+.open{
+	-fx-shape: "M 50 15
+                C 50 -10, 0 -10, 0 15
+                C 0 30, 25 45, 50 60
+                C 75 45, 100 30, 100 15
+                C 100 -10, 50 -10, 50 15 Z";
+    -fx-background-color: white; /* intérieur blanc */
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+    -fx-border-style: dashed; /* bordure pointillée */
+    
+    -fx-min-width: 50px;
+    -fx-min-height: 50px;
+    -fx-max-width: 100px;
+    -fx-max-height: 100px;
+
+    -fx-padding: 0;
+    -fx-cursor: hand;
+    -fx-background-radius: 0;
+}
