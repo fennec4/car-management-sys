@@ -21,11 +21,15 @@ This project allows managing cars, clients, employees, reservations, stock manag
 ## 📷 Screenshots
 
 ### 🔐 Login Screen
-![Login Screen](login.png)
+
+<img src="login.png" alt="Login Screen" width="600"/>
 
 ### 📊 Dashboard
-![Dashboard](dashboard.png)
+
+<img src="dashboard.png" alt="Dashboard" width="600"/>
 
 ### 👤 Client Management
-![Client View](client.png)
+
+<img src="client.png" alt="Dashboard" width="600"/>
+
 
